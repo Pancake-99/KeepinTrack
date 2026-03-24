@@ -1,6 +1,6 @@
-# KeepinTrack 🏋️‍♂️📊
+# KeepinTrack
 
-¡Hola! Este es un proyecto personal que armé para llevar un registro diario de mis objetivos de salud, nutrición y fitness. Funciona como un tracker donde voy anotando cosas día a día, como por ejemplo:
+Este es un proyecto personal que armé para llevar un registro diario de mis objetivos de salud, nutrición y fitness. Funciona como un tracker donde voy anotando cosas día a día, como por ejemplo:
 
 - Calorías y gramos de proteína por cada comida (desayuno, almuerzo, cena, snacks).
 - Cantidad de pasos diarios.
@@ -10,13 +10,13 @@
 
 > **Nota:** Este proyecto es pura y exclusivamente para uso personal. No está pensado para mostrarse como material de portfolio, ni está buscando tener las mejores prácticas empresariales, simplemente es una herramienta que me sirve a mí.
 
-## Stack Tecnológico 🛠️
+## Stack Tecnológico
 Las tecnologías que estoy usando para levantar esto son:
 - **Frontend:** React + Vite
 - **Routing:** React Router
 - **Base de Datos / Backend:** Supabase (almacenamiento de datos y métricas).
 
-## Cómo correrlo localmente 🚀
+## Cómo correrlo localmente
 
 Por si necesito levantar el proyecto en otra compu, estos son los pasos a seguir:
 
