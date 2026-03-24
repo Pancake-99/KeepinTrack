@@ -6,7 +6,7 @@ export default function Hero() {
 			<div>
 				<div className="hero-label">Training Protocol</div>
 				<h1>
-					Physique<em>Routine</em>
+					Keepin'<em>Track</em>
 				</h1>
 			</div>
 			<div className="hero-stats">
