@@ -27,11 +27,18 @@ function getDayIndex(dateStr) {
 
 function n(v) { return Number(v) || 0; }
 
+// Returns null if the field is empty/missing, otherwise the numeric value
+function valOrNull(entry, field) {
+  if (!entry) return null;
+  const v = entry[field];
+  if (v === '' || v === null || v === undefined) return null;
+  return Number(v) || 0;
+}
+
 function computeRow(entries, field) {
   return DAY_NAMES.map((_, i) => {
     const entry = entries[i];
-    if (!entry) return null;
-    return n(entry[field]);
+    return valOrNull(entry, field);
   });
 }
 
@@ -39,6 +46,11 @@ function computeTotalCalRow(entries) {
   return DAY_NAMES.map((_, i) => {
     const e = entries[i];
     if (!e) return null;
+    const bc = valOrNull(e, 'breakfast_cal');
+    const lc = valOrNull(e, 'lunch_cal');
+    const dc = valOrNull(e, 'dinner_cal');
+    const sc = valOrNull(e, 'snacks_cal');
+    if (bc === null && lc === null && dc === null && sc === null) return null;
     return n(e.breakfast_cal) + n(e.lunch_cal) + n(e.dinner_cal) + n(e.snacks_cal);
   });
 }
@@ -47,6 +59,11 @@ function computeTotalProRow(entries) {
   return DAY_NAMES.map((_, i) => {
     const e = entries[i];
     if (!e) return null;
+    const bp = valOrNull(e, 'breakfast_pro');
+    const lp = valOrNull(e, 'lunch_pro');
+    const dp = valOrNull(e, 'dinner_pro');
+    const sp = valOrNull(e, 'snacks_pro');
+    if (bp === null && lp === null && dp === null && sp === null) return null;
     return n(e.breakfast_pro) + n(e.lunch_pro) + n(e.dinner_pro) + n(e.snacks_pro);
   });
 }
